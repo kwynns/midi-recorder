@@ -26,15 +26,42 @@ and any parser or input-overflow warnings. Files are placed in `/MIDI` as
 
 ## Parts list
 
-Prices from the [M5Stack store](https://shop.m5stack.com/) as of September 2026;
-shipping and tax are extra. You will also need a FAT32 microSD card (M5Stack
-recommends up to 16 GB for the CoreS3 slot).
+Prices below are approximate retail as of September 2026; shipping and tax are
+extra. You will also need a FAT32 microSD card (M5Stack recommends up to 16 GB
+for the CoreS3 slot).
+
+### This build
 
 | Part | Link | Price |
 | --- | --- | --- |
 | M5Stack CoreS3 (K128) | [shop.m5stack.com](https://shop.m5stack.com/products/m5stack-cores3-esp32s3-iotdevelopment-kit) | $59.90 |
 | M5Stack Unit MIDI (U187) | [shop.m5stack.com](https://shop.m5stack.com/products/midi-unit-with-din-connector-sam2695) | $14.50 |
-| **Total (hardware)** | | **$74.40** |
+| **Total** | | **$74.40** |
+
+### Cost comparison
+
+| Approach | Approx. cost |
+| --- | --- |
+| Bare ESP32 + DIY MIDI DIN (no touchscreen) | **~$25–$35** |
+| **This build (CoreS3 + Unit MIDI)** | **$74.40** |
+| Commercial standalone MIDI recorder | **~$185–$470** |
+
+**Bare ESP32 path (~$25–$35):** an
+[ESP32-S3 DevKit](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-DEVKITC-1-N8R8/15295894)
+(~$15), a hardwired 5-pin DIN MIDI IN (jack + 6N138 optocoupler + a few
+passives), and a [microSD breakout](https://www.adafruit.com/product/254)
+(~$7.50) if you still want on-card `.MID` files. No touchscreen — arm/stop via
+serial or buttons, and this firmware’s UI would need reworking.
+
+**Commercial standalones (~$185–$470):** purpose-built boxes such as
+[Jamcorder](https://www.jamcorder.com/) (~$185–$249) or the multitrack
+[Retrokits RK-008](https://retrokits.com/shop/rk008/) (~$470).
+
+The DIY path is cheapest if you are happy soldering and living without a
+screen. This M5Stack kit sits in the middle: still under $80, with a finished
+touch UI and no custom MIDI wiring. Commercial recorders cost several times
+more and add features (auto-capture, multitrack editing, polish) this project
+does not attempt.
 
 ## Hardware setup
 
