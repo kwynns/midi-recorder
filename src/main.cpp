@@ -331,7 +331,7 @@ void armRecording(std::uint64_t requestedAtUs) {
   }
 
   appState = AppState::Armed;
-  setStatusDetail("Waiting for Digitakt PLAY");
+  setStatusDetail("Waiting for sequencer PLAY");
   fullRedrawNeeded = true;
   drainMidiQueue();
 }
@@ -435,7 +435,7 @@ void drawDynamicContent() {
   const std::uint32_t displayedWarnings =
       appState == AppState::Saved ? finalWarningCount : liveWarnings;
   if (appState == AppState::Armed) {
-    std::snprintf(stats, sizeof(stats), "Press PLAY on the Digitakt");
+    std::snprintf(stats, sizeof(stats), "Press PLAY on the sequencer");
   } else if (appState == AppState::Recording ||
              appState == AppState::Saving || appState == AppState::Saved) {
     if (displayedWarnings != 0) {
