@@ -24,6 +24,18 @@ While recording, the display shows elapsed `HH:MM:SS.t`, the captured-event coun
 and any parser or input-overflow warnings. Files are placed in `/MIDI` as
 `REC0001.MID`, `REC0002.MID`, and so on; existing files are never overwritten.
 
+## Parts list
+
+Prices from the [M5Stack store](https://shop.m5stack.com/) as of September 2026;
+shipping and tax are extra. You will also need a FAT32 microSD card (M5Stack
+recommends up to 16 GB for the CoreS3 slot).
+
+| Part | Link | Price |
+| --- | --- | --- |
+| M5Stack CoreS3 (K128) | [shop.m5stack.com](https://shop.m5stack.com/products/m5stack-cores3-esp32s3-iotdevelopment-kit) | $59.90 |
+| M5Stack Unit MIDI (U187) | [shop.m5stack.com](https://shop.m5stack.com/products/midi-unit-with-din-connector-sam2695) | $14.50 |
+| **Total (hardware)** | | **$74.40** |
+
 ## Hardware setup
 
 1. Insert a FAT32-formatted microSD card. M5Stack specifies up to 16 GB for the
